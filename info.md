@@ -32,11 +32,11 @@ Before modeling, the raw data (~36M rows per month) was cleaned and optimized.
     2.  **[Test]** Used a **`left_anti` join** to find all `(prev, curr)` pairs in the **Month 2 (August)** test set that *did not* exist in `baseline_edges`.
     3.  **[Result]** Flagged **1,141,450** new, previously unseen paths.
 
-####  Model 3: Behavioral (K-Means Clustering)
+####  Model 3: Behavioral  (K-Means Clustering)
 - **Purpose:** To detect **behavioral anomalies**—articles whose *overall traffic profile* is unusual.
 - **Why this method?**
     - An article can be anomalous even if no single path to it is a 7-sigma outlier or brand new. Its *pattern* of traffic might change.
-    - We create a 7-feature **"traffic profile"** (`in_degree`, `out_degree`, `in_clicks`, `out_clicks`, `ratio_out_in`, `bounce_rate`, etc.) for each article.
+    - We create a 7-feature **traffic profile** (`in_degree`, `out_degree`, `in_clicks`, `out_clicks`, `ratio_out_in`, `bounce_rate`, etc.) for each article.
     - **K-Means clustering** is an unsupervised ML algorithm that groups articles with similar profiles into "normal" clusters (e.g., a "hub" cluster, a "dead-end" cluster).
     - An article is a behavioral anomaly if its profile is very far (high Euclidean distance) from the center of *any* "normal" cluster.
 - **Implementation:**
