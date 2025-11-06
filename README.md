@@ -1,6 +1,6 @@
 # Detection of Anomalous Navigation Patterns in Wikipedia Clickstream
 
-## 📜 Project Overview
+## Project Overview
 
 This project implements a complete Big Data Analytics (BDA) pipeline using PySpark to detect and analyze anomalous navigation patterns from the large-scale Wikipedia clickstream dataset.
 The core problem is that anomaly is not a single, well-defined event. An anomaly could be a massive traffic spike (such as a click bot), a new, never-seen-before navigation path to an article, or a subtle shift in an article's overall traffic pattern (a behavioral shift).
