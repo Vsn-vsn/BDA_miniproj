@@ -18,11 +18,3 @@ This project tackles this problem by building **three distinct detection models*
 2.  Place the clickstream data (`clickstream-enwiki-2025-07.tsv`, etc.) in the working directory.
 3.  Run the `phases.ipynb` notebook first to perform preprocessing, training, and save the models.
 4.  Run the `anomaly_eval.ipynb` notebook to load the models, perform detection on the test data, and generate the final analysis.
-
-## Authors
-
-* **Vikasan S Nayak**
-* **Dube Prajwal Manoj**
-* **Uday Manoj Todi**
-
-Under the guidance of **Dr. Anup Bhat B**.
